@@ -1,3 +1,21 @@
   {{ template "_internal/google_analytics_async.html" . }}
+
+
+  <div id="footer-content">
+
+    <hr />
+
+    {{ range $index, $item := .Site.Menus.social }}
+      {{ if gt $index 0 }} &nbsp; &middot; &nbsp; {{ end }}
+      <span style="white-space: nowrap">
+        {{ $item.Name }} / <a href="{{ $item.URL }}">{{ $item.Title }}</a>
+      </span>
+    {{ end }}
+
+    <br /> <br />
+
+  </div>
+
+
 </body>
 </html>
