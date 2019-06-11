@@ -23,6 +23,11 @@
   </div>
 </section>
 
+{{ if eq .Section "blog" }}
+  {{ template "_internal/disqus.html" . }}
+  <br />
+{{ end }}
+
 {{ partial "footer.html" . }}
 
 
