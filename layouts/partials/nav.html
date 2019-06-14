@@ -1,0 +1,12 @@
+<section id=nav>
+  <section id="nav-left">
+    <span id="sitename"><a href="/">{{ .Site.Params.sitename }}</a></span>
+  </section>
+  <section id="nav-right">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+</section>
