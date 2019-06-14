@@ -22,12 +22,13 @@
     {{ end }}
   </div>
   <br /><br />
-</section>
 
-{{ if eq .Section "blog" }}
-  {{ template "_internal/disqus.html" . }}
-  <br />
-{{ end }}
+  {{ if eq .Section "blog" }}
+    {{ template "_internal/disqus.html" . }}
+    <br />
+  {{ end }}
+
+</section>
 
 {{ partial "footer.html" . }}
 
